@@ -1,0 +1,54 @@
+
+<div class="row">
+  <div class="col-12">
+    <img  class="header-icon" src="/assets/fizzbuzzWordArt.png">
+  </div>
+</div>
+
+
+<div class="container-fluid pr-5 pl-5">
+  <div class="row border border-dark p-5 whiteBG">
+    <div class="col-4">
+
+      <div class="row">
+
+        <input class="formcontrol col-6" #newNumber type="number" required/>
+      </div>
+      <div class="row mt-2">
+
+        <button class="btn btn-large btn-success col-3" (click)="addInputToList(newNumber.value)">
+          ADD to List
+        </button>
+        <div class="col-1"></div>
+        <button class="btn btn-large btn-danger col-2 " (click)="clearNumList()">
+         clear
+        </button>
+      </div>
+
+      <div class="row mt-2 numberList">
+        <div class="col-1" *ngFor="let num of inputList;">
+          <p class="text-dark">{{num}}</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-8">
+
+      <div class="row border border-dark overflow-scroll-x " >
+        <div class="col-2" *ngFor="let item of fizzBuzzList;">
+          <p class="text-dark border border-dark" style="font-size: small;">{{item}}</p>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <button class="btn btn-large btn-success col-3" (click)="start()" [disabled]="!startButton">Start</button>
+        <div class="col-1"></div>
+        <button class="btn btn-large btn-danger col-3" (click)="clearResults()" [disabled]="!startButton">Clear</button>
+        <div class="col-5"></div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>

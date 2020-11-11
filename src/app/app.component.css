@@ -1,0 +1,21 @@
+.overflow-scroll-x {
+
+  overflow-x: scroll;
+}
+
+.whiteBG {
+
+  background-color: whitesmoke;
+  color: white;
+}
+
+
+.numberList {
+  width: 200px;
+  word-break: inherit;
+}
+
+.fizzbuzzList {
+  width: 400px;
+  word-break: inherit;
+}
